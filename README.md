@@ -1,3 +1,12 @@
+
+# The .github/workflows/cicd-workflow.yml is for CI/CD with github actions
+
+- deploy Nodejs application to AWS EC2 using docker and GitHub Actions
+- whenever a change is pushed to github respository, it will be published to AWS EC2 instance
+- to run the app to get all users, replace the localhost with the `Public IPv4 address` of the EC2 instance in `localhost:5500/rest/getAllUsers` 
+
+- ref: https://www.youtube.com/watch?v=OeLnEB9FDpw
+
 # Nodejs app with rest and graphql example
 
 An example of GraphQL queries/mutations with Node and Express js.
@@ -40,4 +49,3 @@ mutation{
     email
   }
 }
-
