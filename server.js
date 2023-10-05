@@ -73,6 +73,11 @@ app.get("/rest/getAllUsers", (req, res) => {
     res.send(userData)
    });
 
+
+app.get("/rest/firstUser", (req, res) => {
+    res.send(userData[0])
+   });
+
 app.listen(PORT, () => {
   console.log("Server running on port :: ", `${PORT}`);
 });
