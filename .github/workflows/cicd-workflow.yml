@@ -1,0 +1,12 @@
+name: CICD
+on: 
+  push: 
+    branches: [main]
+
+jobs:
+  build: 
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+      - name: Login to docker hub
+        
