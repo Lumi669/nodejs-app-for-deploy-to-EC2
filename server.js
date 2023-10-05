@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 5000;
+const PORT = 5500;
 const userData = require("./MOCK_DATA.json");
 const graphql = require("graphql")
 const { GraphQLObjectType, GraphQLSchema, GraphQLList, GraphQLID, GraphQLInt, GraphQLString } = graphql
@@ -74,5 +74,5 @@ app.get("/rest/getAllUsers", (req, res) => {
    });
 
 app.listen(PORT, () => {
-  console.log("Server running");
+  console.log("Server running on port ", `${PORT}`);
 });
