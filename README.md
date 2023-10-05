@@ -6,6 +6,11 @@
 - to run the app to get all users, replace the localhost with the `Public IPv4 address` of the EC2 instance in `localhost:5500/rest/getAllUsers` 
 
 - ref: https://www.youtube.com/watch?v=OeLnEB9FDpw
+- Procedures
+-  1. Create above workfile in root 
+-  2. Add docker username and password to this repository's `Secretes and Variables / Actions` - 
+-  3. Launch an EC2 instance 
+-  4. in github , this repository's `Settings/Actions/Runners`, click `New self-hosted runnver`, then copy paste the command into the EC2 cloud shell (which is opened via `EC2 Instance Connect` of connect)
 
 # Nodejs app with rest and graphql example
 
