@@ -12,20 +12,20 @@ jobs:
       - name: Login to docker hub
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
       - name: Build docker image
-        run: docker build -t nodejs-app-for-deploy-to-ec2/nodejs-app .
+        run: docker build -t orvokki/nodejs-app .
       - name: Publish image to docker hub
-        run: docker push nodejs-app-for-deploy-to-ec2/nodejs-app:latest
+        run: docker push orvokki/nodejs-app:latest
 
   deploy:
     needs: build 
     runs-on: [ip-172-31-21-217]
     steps:
       - name: Pull image from docker hub
-        run: docker pull nodejs-app-for-deploy-to-ec2/nodejs-app:latest
+        run: docker pull orvokki/nodejs-app:latest
       - name: Delete old container
         run: docker rm -f nodejs-app-container
       - name: Run docker container
-        run: docker run -d -p 5500:5500 -name nodejs-app-container nodejs-app-for-deploy-to-ec2/nodejs-app
+        run: docker run -d -p 5500:5500 -name nodejs-app-container orvokki/nodejs-app
 
 
 
