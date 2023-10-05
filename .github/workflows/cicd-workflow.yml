@@ -18,7 +18,7 @@ jobs:
 
   deploy:
     needs: build 
-    runs-on: self-hosted
+    runs-on: [hello-runner]
     steps:
       - name: Pull image from docker hub
         run: docker pull orvokki/nodejs-app:latest
