@@ -8,7 +8,7 @@
 - ref: https://www.youtube.com/watch?v=OeLnEB9FDpw
 - Procedures
 -  1. Create above workfile in root 
--  2. Add docker username and password to this repository's `Secretes and Variables / Actions` - 
+-  2. Add docker username and password to this repository's `Secretes and Variables / Actions` Note here the docker username is not the username for logging in docker, but the the name of docker account shown beside the figner printe like icon/logo/image
 -  3. Launch an EC2 instance 
 -  4. in github , this repository's `Settings/Actions/Runners`, click `New self-hosted runnver`, then copy paste the command into the EC2 cloud shell (which is opened via `EC2 Instance Connect` of connect), note: 1. choose Linux because the EC2 instance free tier is on Linux 2. if the EC2 shell freeze, can duplicate it and run `./run.sh` in dir acions-runner (check by `ls -la` first) 3. step 2 is to make sure that the runner is in Idle status instead of Offline which will make the deploying to EC2 waiting. 
 
